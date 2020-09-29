@@ -1,18 +1,51 @@
 const socket = io('http://localhost:3000')
 
-const button = document.querySelector("#but");
+const button = document.querySelectorAll(".hel");
+console.log(button[0])
 
 socket.on('chat-message', data => {
     console.log(data)
-    if (data == "75"){
+    if (data == 0){
+        var audio = new Audio('music.mp3');
+        audio.play();
+    }
+    if (data == 1){
+        var audio = new Audio('music1.mp3');
+        audio.play();
+    }
+    if (data == 2){
+        var audio = new Audio('music2.mp3');
+        audio.play();
+    }
+    if (data == 3){
+        var audio = new Audio('music3.mp3');
+        audio.play();
+    }
+    if (data == 4){
+        var audio = new Audio('music4.mp3');
+        audio.play();
+    }
+    if (data == 5){
         var audio = new Audio('music.mp3');
         audio.play();
     }
 })
 
-button.addEventListener("click", e=>{
-    e.preventDefault()
-    console.log("Clicked")
-    
-    socket.emit("sound1", "75")
-})
+
+function butTri(n){
+    button[n].addEventListener("click", e=>{
+        e.preventDefault()
+        console.log("Clicked")
+        console.log(n)
+        socket.emit("sound1", n)
+    })
+}
+
+
+
+butTri(0)
+butTri(1)
+butTri(2)
+butTri(3)
+butTri(4)
+butTri(5)
