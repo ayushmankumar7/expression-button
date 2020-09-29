@@ -6,27 +6,27 @@ console.log(button[0])
 socket.on('chat-message', data => {
     console.log(data)
     if (data == 0){
-        var audio = new Audio('music.mp3');
+        var audio = new Audio('assets/sounds/music.mp3');
         audio.play();
     }
     if (data == 1){
-        var audio = new Audio('music1.mp3');
+        var audio = new Audio('assets/sounds/music1.mp3');
         audio.play();
     }
     if (data == 2){
-        var audio = new Audio('music2.mp3');
+        var audio = new Audio('assets/sounds/music2.mp3');
         audio.play();
     }
     if (data == 3){
-        var audio = new Audio('music3.mp3');
+        var audio = new Audio('assets/sounds/music3.mp3');
         audio.play();
     }
     if (data == 4){
-        var audio = new Audio('music4.mp3');
+        var audio = new Audio('assets/sounds/music4.mp3');
         audio.play();
     }
     if (data == 5){
-        var audio = new Audio('music.mp3');
+        var audio = new Audio('assets/sounds/music.mp3');
         audio.play();
     }
 })
